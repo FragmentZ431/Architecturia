@@ -1,6 +1,7 @@
+
 {
   "name": "zone-431-design",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "private": true,
   "description": "Éditeur architectural 2D/3D local ZONE-431 DESIGN",
   "main": "electron/main.cjs",
@@ -12,6 +13,8 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
+    "electron-log": "^5.4.4",
+    "electron-updater": "^6.8.12",
     "lucide-react": "^0.468.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
@@ -21,11 +24,11 @@
   "devDependencies": {
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
-    "electron": "^33.4.11",
     "@types/three": "^0.171.0",
+    "electron": "^45.4.1",
+    "electron-builder": "^26.18.1",
     "typescript": "^5.7.2",
-    "vite": "^6.0.5",
-    "electron-builder": "^25.1.8"
+    "vite": "^6.0.5"
   },
   "build": {
     "appId": "fr.zone431.design",
@@ -39,6 +42,13 @@
       "package.json"
     ],
     "asar": true,
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "FragmentZ431",
+        "repo": "Architecturia"
+      }
+    ],
     "win": {
       "target": [
         {
