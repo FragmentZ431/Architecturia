@@ -1,0 +1,26 @@
+ZONE-431 DESIGN 0.2.2 — Création de l'application Windows
+
+Cette archive contient le projet et la configuration de création d'un installateur Windows.
+Elle ne contient pas encore un .exe déjà compilé.
+
+PRÉREQUIS
+- Windows 10 ou 11 64 bits
+- Node.js installé
+- Une connexion Internet pour installer les dépendances et electron-builder la première fois
+
+CRÉER L'INSTALLATEUR
+1. Décompresser le dossier ZONE-431-DESIGN-v0.2.2.
+2. Ouvrir ce dossier dans VS Code.
+3. Ouvrir Terminal > Nouveau terminal.
+4. Exécuter : npm install
+5. Exécuter : npm run dist:win
+
+RÉSULTAT
+L'installateur sera créé dans le dossier release, sous le nom :
+ZONE-431-DESIGN-Setup-0.2.2.exe
+
+Lancer cet installateur. Il proposera l'installation de ZONE-431 DESIGN et créera
+un raccourci sur le Bureau ainsi qu'une entrée dans le menu Démarrer.
+Après installation, l'application pourra être lancée sans ouvrir VS Code ni utiliser
+npm run start. L'application fonctionne localement ; la création initiale de
+l'installateur nécessite le téléchargement des dépendances.
